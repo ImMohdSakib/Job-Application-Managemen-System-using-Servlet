@@ -1,0 +1,168 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Job Application Form</title>
+	    
+	    <style>
+	    body {
+    /* Setting a background image with a slight overlay */
+    background: url('https://cdn.pixabay.com/photo/2015/05/26/23/52/technology-785742_1280.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    color: white;
+}
+.container{
+
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+}
+
+/* Container for the form with blur effect */
+.form-container {
+    background: rgba(0, 0, 0, 0.4); /* White background with transparency */
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; /* Width of the form container */
+    margin: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label and input styling */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    border:none;
+    border-bottom: 1px solid;
+    outline: none
+}
+textarea::placeholder{
+	
+	color: white;
+
+}
+
+
+
+/* Button styling */
+button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;
+}
+input{
+	color: white;
+	background-color: transparent;
+
+}
+textarea{
+background-color: transparent;
+color: white;
+}
+select{
+color: white;
+background-color: transparent;
+}
+input::placeholder{
+color: black;
+color: white;
+}
+select option{
+
+	color: white;
+	background-color: black;
+
+}
+
+	    
+	    
+	    </style>
+	</head>
+	<body>
+	<div class = "container">
+	  <h2>Job Application Form</h2>
+<div class="form-container">
+    <form action="JobApplicationServlet" method="post">
+        <!-- Personal Information -->
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required><br><br>
+
+        <input type="text" id="fatherName" name="fatherName" placeholder="Enter your father's name" required><br><br>
+
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <input type="text" id="contactNumber" name="contactNumber" placeholder="Enter your contact number" required><br><br>
+
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required><br><br>
+
+        <input type="text" id="aadhar" name="aadhar" placeholder="Enter your Aadhar number" required><br><br>
+
+        <textarea id="address" name="address" rows="4" placeholder="Enter your current address" required></textarea><br><br>
+
+        <!-- Education Information -->
+        <input type="text" id="highestQualification" name="highestQualification" placeholder="Enter your highest qualification" required><br><br>
+
+        <input type="text" id="university" name="university" placeholder="Enter your university or college name" required><br><br>
+
+        <input type="text" id="yearPassing" name="yearPassing" placeholder="Enter your year of passing" required><br><br>
+
+        <input type="text" id="percentage" name="percentage" placeholder="Enter your percentage/CGPA" required><br><br>
+
+        <!-- Job Preferences -->
+        <select id="jobType" name="jobType" required>
+            <option value="" disabled selected>Select job type</option>
+            <option value="Full Time">Full Time</option>
+            <option value="Part Time">Part Time</option>
+            <option value="Internship">Internship</option>
+        </select><br><br>
+
+        <input type="text" id="preferredLocation" name="preferredLocation" placeholder="Enter your preferred job location" required><br><br>
+
+        <input type="text" id="preferredRole" name="preferredRole" placeholder="Enter your preferred job role" required><br><br>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</div>
+
+
+</div>
+
+	</body>
+	</html>
